@@ -22,8 +22,13 @@ export const githubApi = createApi({
             query: (username: string) => ({
                 url: `users/${username}/repos`,
             })
-        })
+        }),
+        /*createUser: build.mutation<Что вернёт сервер, Что мы принимаем> ({
+            query: () => ({
+                url: 'url',
+            })
+        })*/ 
     })
 });
 
-export const {useSearchUsersQuery, useLazyGetUserReposQuery} = githubApi;
+export const {useSearchUsersQuery, useLazyGetUserReposQuery, /* useCreateUserMutation */} = githubApi;
